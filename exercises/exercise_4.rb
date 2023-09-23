@@ -33,3 +33,9 @@ puts @mens_store
   puts "Username: #{store.name}"
   puts "Revenue: #{store.annual_revenue}"
 end
+
+@womens_store = Store.where(womens_apparel:true, annual_revenue: 0..999999)
+
+@womens_store.each do |store|
+  puts store.name
+end
