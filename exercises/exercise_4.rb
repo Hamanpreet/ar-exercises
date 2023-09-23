@@ -29,7 +29,7 @@ Store.create(
 @mens_store = Store.where(mens_apparel:true)
 puts @mens_store
 
-@mens_store do |u|
-  puts "Username: #{i.name}"
-  puts "Revenue: #{i.annual_revenue}"
+@mens_store.each do |store|
+  puts "Username: #{store.name}"
+  puts "Revenue: #{store.annual_revenue}"
 end
